@@ -1,6 +1,7 @@
 import 'package:app_project/Components/app_button.dart';
 import 'package:app_project/Components/square_tile.dart';
 import 'package:app_project/Components/text_field.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,7 +17,12 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
 
   //Sign user in
-  void signUserIn() {}
+  void signUserIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text,
+      password: passwordController.text,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
