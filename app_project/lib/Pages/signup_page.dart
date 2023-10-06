@@ -1,5 +1,7 @@
 import 'package:app_project/Components/app_button.dart';
 import 'package:app_project/Components/text_field.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/square_tile.dart';
@@ -17,8 +19,10 @@ class _SignUpPageState extends State<SignUpPage> {
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
+  
   //Sign user in
-  void signUserUp() {}
+  void signUserUp() async {
+  }
 
   @override
   Widget build(BuildContext context) {
